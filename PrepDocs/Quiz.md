@@ -25,3 +25,61 @@ There are the following features in Java Programming Language.
 * **Distributed**: Java is distributed because it facilitates users to create distributed applications in Java. RMI and EJB are used for creating distributed applications. This feature of Java makes us able to access files by calling the methods from any machine on the internet.
 
 * **Dynamic**: Java is a dynamic language. It supports dynamic loading of classes. It means classes are loaded on demand. It also supports functions from its native languages, i.e., C and C++.
+
+## 2. What do you understand by Java virtual machine?
+
+Java Virtual Machine is a virtual machine that enables the computer to run the Java program. JVM acts like a run-time engine which calls the main method present in the Java code. JVM is the specification which must be implemented in the computer system. The Java code is compiled by JVM to be a Bytecode which is machine independent and close to the native code.
+
+## 3. What is the difference between JDK, JRE, and JVM?
+
+#### JVM
+JVM is an acronym for Java Virtual Machine; it is an abstract machine which provides the runtime environment in which Java bytecode can be executed. It is a specification which specifies the working of Java Virtual Machine. Its implementation has been provided by Oracle and other companies. Its implementation is known as JRE.
+
+JVMs are available for many hardware and software platforms (so JVM is platform dependent). It is a runtime instance which is created when we run the Java class. There are three notions of the JVM: specification, implementation, and instance.
+
+#### JRE
+JRE stands for Java Runtime Environment. It is the implementation of JVM. The Java Runtime Environment is a set of software tools which are used for developing Java applications. It is used to provide the runtime environment. It is the implementation of JVM. It physically exists. It contains a set of libraries + other files that JVM uses at runtime.
+
+#### JDK
+JDK is an acronym for Java Development Kit. It is a software development environment which is used to develop Java applications and applets. It physically exists. It contains JRE + development tools. JDK is an implementation of any one of the below given Java Platforms released by Oracle Corporation:
+
+    Standard Edition Java Platform
+    Enterprise Edition Java Platform
+    Micro Edition Java Platform
+
+## 4.What types of memory areas are allocated by JVM?
+
+* **Class(Method) Area**: Class Area stores per-class structures such as the runtime constant pool, field, method data, and the code for methods.
+* **Heap**: It is the runtime data area in which the memory is allocated to the objects
+* **Stack**: Java Stack stores frames. It holds local variables and partial results, and plays a part in method invocation and return. Each thread has a private JVM stack, created at the same time as the thread. A new frame is created each time a method is invoked. A frame is destroyed when its method invocation completes.
+* **Program Counter Register**: PC (program counter) register contains the address of the Java virtual machine instruction currently being executed.
+* **Native Method Stack**: It contains all the native methods used in the application.
+
+## 5. What gives Java its 'write once and run anywhere' nature? 
+
+The bytecode. Java compiler converts the Java programs into the class file (Byte Code) which is the intermediate language between source code and machine code. This bytecode is not platform specific and can be executed on any computer.
+
+## 6. What is classloader?
+
+Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.
+
+* **Bootstrap ClassLoader**: This is the first classloader which is the superclass of Extension classloader. It loads the rt.jar file which contains all class files of Java Standard Edition like java.lang package classes, java.net package classes, java.util package classes, java.io package classes, java.sql package classes, etc.
+* **Extension ClassLoader**: This is the child classloader of Bootstrap and parent classloader of System classloader. It loads the jar files located inside $JAVA_HOME/jre/lib/ext directory.
+* **System/Application ClassLoader**: This is the child classloader of Extension classloader. It loads the class files from the classpath. By default, the classpath is set to the current directory. You can change the classpath using "-cp" or "-classpath" switch. It is also known as Application classloader.
+
+## 7.Is Empty .java file name a valid source file name?
+
+Yes, Java allows to save our java file by .java only, we need to compile it by javac .java and run by java classname Let's take a simple example:
+
+```java
+//save by .java only  
+class A {  
+    public static void main(String args[]){  
+    System.out.println("Hello java");  
+    }  
+}  
+```
+compile by javac .java  
+run by     java A  
+
+
