@@ -47,7 +47,7 @@ JDK is an acronym for Java Development Kit. It is a software development environ
     Enterprise Edition Java Platform
     Micro Edition Java Platform
 
-## 4.What types of memory areas are allocated by JVM?
+## 4. What types of memory areas are allocated by JVM?
 
 * **Class(Method) Area**: Class Area stores per-class structures such as the runtime constant pool, field, method data, and the code for methods.
 * **Heap**: It is the runtime data area in which the memory is allocated to the objects
@@ -67,7 +67,7 @@ Classloader is a subsystem of JVM which is used to load class files. Whenever we
 * **Extension ClassLoader**: This is the child classloader of Bootstrap and parent classloader of System classloader. It loads the jar files located inside $JAVA_HOME/jre/lib/ext directory.
 * **System/Application ClassLoader**: This is the child classloader of Extension classloader. It loads the class files from the classpath. By default, the classpath is set to the current directory. You can change the classpath using "-cp" or "-classpath" switch. It is also known as Application classloader.
 
-## 7.Is Empty .java file name a valid source file name?
+## 7. Is Empty .java file name a valid source file name?
 
 Yes, Java allows to save our java file by .java only, we need to compile it by javac .java and run by java classname Let's take a simple example:
 
@@ -82,4 +82,42 @@ class A {
 compile by javac .java  
 run by     java A  
 
+## 8. Is delete, next, main, exit or null keyword in java?
+No.
+
+## 9. If I don't provide any arguments on the command line, then what will the value stored in the String array passed into the main() method, empty or NULL?
+
+It is empty, but not null.
+
+## 10. What if I write static public void instead of public static void?
+
+The program compiles and runs correctly because the order of specifiers doesn't matter in Java.
+
+## 11. What is the default value of the local variables?
+
+The local variables are not initialized to any default value, neither primitives nor object references. 
+
+## 12. What are the various access specifiers in Java?
+
+In Java, access specifiers are the keywords which are used to define the access scope of the method, class, or a variable. In Java, there are four access specifiers given below.
+
+* **Public** The classes, methods, or variables which are defined as public, can be accessed by any class or method.
+* **Protected** Protected can be accessed by the class of the same package, or by the sub-class of this class, or within the same class.
+* **Default** Default are accessible within the package only. By default, all the classes, methods, and variables are of default scope.
+* **Private** The private class, methods, or variables defined as private can be accessed within the class only.
+
+## 13. What is the purpose of static methods and variables?
+
+The methods or variables defined as static are shared among all the objects of the class. The static is the part of the class and not of the object. The static variables are stored in the class area, and we do not need to create the object to access such variables. Therefore, static is used in the case, where we need to define variables or methods which are common to all the objects of the class.
+
+For example, In the class simulating the collection of the students in a college, the name of the college is the common attribute to all the students. Therefore, the college name will be defined as static.
+
+## 14. What are the advantages of Packages in Java?
+
+There are various advantages of defining packages in Java.
+
+* Packages avoid the name clashes.
+* The Package provides easier access control.
+* We can also have the hidden classes that are not visible outside and used by the package.
+* It is easier to locate the related classes.
 
