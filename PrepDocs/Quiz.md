@@ -159,17 +159,17 @@ There are various advantages of defining packages in Java.
 ## 47.(32) What is association?
 ## 48.(33) What do you mean by aggregation?
 ## 49.(34) What is composition in Java?
-What is difference between Error and Exception?
-How can you handle Java exceptions?
-What are the differences between Checked Exception and Unchecked Exception?
-What purpose does the keywords final, finally, and finalize fulfill?
-What are the differences between throw and throws?
-What is exception hierarchy in java?
-What are the differences between processes and threads?
-Why Runnable Interface is used in Java?
-What are the two ways of implementing multi-threading in Java?
-What is a finally block? Is there a case when finally will not execute?
-What is synchronization?
-Can we write multiple catch blocks under single try block?
-In multi-threading how can we ensure that a resource isn't used by multiple threads simultaneously?
-Describe different states of a thread.
+## 50.(35) What is difference between Error and Exception?##
+## 51.(36) How can you handle Java exceptions?
+## 52.(37) What are the differences between Checked Exception and Unchecked Exception?
+## 53.(38) What purpose does the keywords final, finally, and finalize fulfill?
+## 54.(39) What are the differences between throw and throws?
+## 55.(40) What is exception hierarchy in java?
+## 56.(41) What are the differences between processes and threads?
+## 57.(42) Why Runnable Interface is used in Java?
+## 58.(43) What are the two ways of implementing multi-threading in Java?
+## 59.(44) What is a finally block? Is there a case when finally will not execute?
+## 60.(45) What is synchronization?
+## 61.(46) Can we write multiple catch blocks under single try block?
+## 62.(47) In multi-threading how can we ensure that a resource isn't used by multiple threads simultaneously?
+## 63.(48) Describe different states of a thread.
