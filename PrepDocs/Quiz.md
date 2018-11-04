@@ -121,3 +121,55 @@ There are various advantages of defining packages in Java.
 * We can also have the hidden classes that are not visible outside and used by the package.
 * It is easier to locate the related classes.
 
+
+
+-------------------------
+
+## 15.(1) Explain public static void main(String args[]).
+## 16.(2) Why Java is platform independent?
+## 17.(3) Why java is not 100% Object-oriented?
+## 18.(4) Which class is the superclass of all classes?
+## 20.(5) Java is Pass by Value or Pass by Reference?
+## 21.(6) Can we have multiple public classes in a java source file?
+## 22.(7) What is Java Package and which package is imported by default?
+## 23.(8) What are access modifiers?
+## 24.(9) Can we call a non-static method from inside a static method?
+## 25.(10) What are wrapper classes?
+## 26.(11) What are constructors in Java?
+## 27.(12) Can a class have multiple constructors?
+## 28.(13) What is Enum in Java?
+## 29.(14) What is the difference between double and float variables in Java?
+## 30.(15) What is the difference between continue and break statement?
+## 31.(16) What is singleton class and how can we make a class singleton?
+## 32.(17) Why Strings in Java are called as Immutable?
+## 33.(18) What is the difference between equals() and == ?
+## 34.(19) What are the differences between Heap and Stack Memory?
+## 35.(20) What is Garbage Collection?
+## 36.(21) What does super keyword do?
+## 37.(22) What is this keyword?
+## 38.(23) What is Polymorphism?
+## 39.(24) What is data encapsulation and what's its significance?
+## 40.(25) What is the benefit of Composition over Inheritance?
+## 41.(26) What is the difference between abstract classes and interfaces?
+## 42.(27) Can an interface implement or extend another interface?
+## 43.(28) Can we declare a class as Abstract without having any abstract method?
+## 44.(29) What is method overloading and method overriding?
+## 45.(30) Can you override a private or static method in Java?
+## 46.(31) What is multiple inheritance? Is it supported by Java?
+## 47.(32) What is association?
+## 48.(33) What do you mean by aggregation?
+## 49.(34) What is composition in Java?
+What is difference between Error and Exception?
+How can you handle Java exceptions?
+What are the differences between Checked Exception and Unchecked Exception?
+What purpose does the keywords final, finally, and finalize fulfill?
+What are the differences between throw and throws?
+What is exception hierarchy in java?
+What are the differences between processes and threads?
+Why Runnable Interface is used in Java?
+What are the two ways of implementing multi-threading in Java?
+What is a finally block? Is there a case when finally will not execute?
+What is synchronization?
+Can we write multiple catch blocks under single try block?
+In multi-threading how can we ensure that a resource isn't used by multiple threads simultaneously?
+Describe different states of a thread.
