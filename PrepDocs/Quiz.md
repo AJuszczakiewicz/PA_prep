@@ -1,4 +1,4 @@
-## 1. List the features of Java Programming language.
+﻿## 1. List the features of Java Programming language.
 
 There are the following features in Java Programming Language.
 
@@ -163,13 +163,114 @@ There are various advantages of defining packages in Java.
 ## 51.(36) How can you handle Java exceptions?
 ## 52.(37) What are the differences between Checked Exception and Unchecked Exception?
 ## 53.(38) What purpose does the keywords final, finally, and finalize fulfill?
+
+
+
+
+
+
+
+
 ## 54.(39) What are the differences between throw and throws?
-## 55.(40) What is exception hierarchy in java?
+No.
+THROW
+THROWS
+1)
+Java throw keyword is used to explicitly throw an exception.
+Java throws keyword is used to declare an exception.
+2)
+Checked exception cannot be propagated using throw only.
+Checked exception can be propagated with throws.
+3)
+Throw is followed by an instance.
+Throws is followed by class.
+4)
+Throw is used within the method.
+Throws is used with the method signature.
+5)
+You cannot throw multiple exceptions.
+You can declare multiple exceptions e.g.
+public void method()throws IOException,SQLException.
+
+
+## 55.(40) What is exception hierarchy in Java?
+
+Figure 1: The base of the Java exception hierarchy. Types in red, and their subclasses, are unchecked. 
+
+
+
+
+
+	Since Java exceptions are objects, different types of exceptions can be subclasses of one another, just as with other 	objects. From the base upwards, Java exception classes are organised into a hierarchy. There is a basic exception class 	called Exception as you might expect. But in fact, the base of the hierarchy starts not with Exception but with a class 	called Throwable, which is then subclassed into Exception and Error. Part of the hierarchy is illustrated in Figure 1.
+	src: https://www.javamex.com/tutorials/exceptions/exceptions_hierarchy.shtml
+	more reading: https://www.tutorialspoint.com/java/java_exceptions.htm
+ 
+
 ## 56.(41) What are the differences between processes and threads?
+	Processes and threads are two basic units of execution in concurrent programming. Both processes and threads 	provide an execution environment, but 	creating a new thread requires fewer resources than creating a new process.
+                Processes
+	A process has a self-contained execution environment. A process generally has a complete, private set of basic run-time 	resources; in particular, each process has its own memory space. Processes are often seen as synonymous with programs or 	applications. However, what the user sees as a single application 	may in fact be a set of cooperating processes. Most 	implementations of the Java virtual machine run as a single process. 
+ 	Threads
+	Threads are sometimes called lightweight processes. Threads exist within a process — every process has at least one. 	Threads share the process's resources, including memory 	and open files. This makes for efficient, but potentially 	problematic, communication.
+	Src: https://docs.oracle.com/javase/tutorial/essential/concurrency/procthread.html
+	more reading: https://beginnersbook.com/2015/01/what-is-the-difference-between-a-process-and-a-thread-in-java/
+
 ## 57.(42) Why Runnable Interface is used in Java?
+	The Runnable interface should be implemented by any class whose instances are intended to be executed by a thread. 	The class must define a method of no arguments called run. 
+	In addition, Runnable provides the means for a class to be active while not subclassing Thread. A class that implements 	Runnable can run without subclassing Thread by instantiating a Thread instance and passing itself in as the target. In 	most cases, the Runnable interface should be used if you are only planning to override the run() method and no other 	Thread methods
+	src: https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html
+	more reading: https://www.geeksforgeeks.org/runnable-interface-in-java/
+
+
 ## 58.(43) What are the two ways of implementing multi-threading in Java?
+Threads can be created by using two mechanisms :
+1. Extending the Thread class
+2. Implementing the Runnable Interface (recommended)
+	src: https://www.geeksforgeeks.org/multithreading-in-java/
+	       https://www.geeksforgeeks.org/implement-runnable-vs-extend-thread-in-java/
 ## 59.(44) What is a finally block? Is there a case when finally will not execute?
+	The finally block is a key tool for preventing resource leaks. When closing a file or otherwise recovering resources, place 	the code in a finally block to ensure that resource is always recovered.
+Finally not executing: If the JVM exits while the try or catch code is being executed, then the finally block may not execute. Likewise, if the thread executing the try or catch code is interrupted or killed, the finally block may not execute even though the application as a whole continues. 
+If the ‘try’ block contains break/return, the code in ‘finally’ block WILL STILL EXECUTE!
+	Src: https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html
+	   https://stackoverflow.com/questions/65035/does-a-finally-block-always-get-executed-in-java
+
+
 ## 60.(45) What is synchronization?
+	Threads communicate primarily by sharing access to fields and the objects reference fields refer to. This form of 	communication is extremely efficient, but makes two kinds of errors possible: thread interference and memory consistency 	errors. The tool needed to prevent these errors is synchronization.
+	The Java programming language provides two basic synchronization idioms: synchronized methods and synchronized 	statements. 
+	However, synchronization can introduce thread contention, which occurs when two or more threads try to access the same 	resource simultaneously and cause the Java runtime to execute one or more threads more slowly, or even suspend their 	execution.
+	Src: https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html
+                          https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html
+	More reading: https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html
+
 ## 61.(46) Can we write multiple catch blocks under single try block?
+	Yes, but In Java SE 7 and later, a single catch block can handle more than one 	type of exception. This feature can reduce 	code duplication and lessen the  temptation to catch an overly broad exception. Therefore, both snippets are 	correct:
+
+	src: https://docs.oracle.com/javase/tutorial/essential/exceptions/catch.html
+
+
 ## 62.(47) In multi-threading how can we ensure that a resource isn't used by multiple threads simultaneously?
+	By using ‘synchronized’ keyword.
+	Src: https://www.ibm.com/developerworks/library/j-5things15/index.html
+
+
 ## 63.(48) Describe different states of a thread.
+A thread can be in one of the following states: 
+NEW
+A thread that has not yet started is in this state. 
+RUNNABLE
+A thread executing in the Java virtual machine is in this state. 
+BLOCKED
+A thread that is blocked waiting for a monitor lock is in this state. 
+WAITING
+A thread that is waiting indefinitely for another thread to perform a particular action is in this state. 
+TIMED_WAITING
+A thread that is waiting for another thread to perform an action for up to a specified waiting time is in this state. 
+TERMINATED
+A thread that has exited is in this state. 
+
+
+A thread can be in only one state at a given point in time. These states are virtual machine states which do not reflect any operating system thread states.
+Src: https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.State.html
+diagram src: https://www.geeksforgeeks.org/lifecycle-and-states-of-a-thread-in-java/
